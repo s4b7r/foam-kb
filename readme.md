@@ -1,6 +1,6 @@
 <img src="attachments/foam-icon.png" width=100 align="left">
 
-# s4b7r's private Foam knowledge base
+# s4b7r's Foam knowledge base
 
 **👋 Welcome to my new Foam Knowledge Base!**
 
