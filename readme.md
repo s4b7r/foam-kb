@@ -5,3 +5,5 @@
 **👋 Welcome to my new Foam Knowledge Base!**
 
 To make your own see [Foam template](https://github.com/foambubble/foam-template).
+
+**Look out!** Links are still flaky!
