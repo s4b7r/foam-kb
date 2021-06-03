@@ -41,6 +41,10 @@ SEE    | Pointers to other code, web link, etc.
 
 Get's more Python-specific by referencing [PEP 0350](https://www.python.org/dev/peps/pep-0350/#mnemonics)
 
+## `__repr__` vs `__str__`
+
+Implement `__repr__` for any class you implement. This should be second nature. Implement `__str__` if you think it would be useful to have a string version which errs on the side of readability. quoting https://stackoverflow.com/a/2626364
+
 ## Testing: pytest
 
 I like [pytest](https://docs.pytest.org/)
