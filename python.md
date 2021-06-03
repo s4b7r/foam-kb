@@ -45,6 +45,50 @@ Get's more Python-specific by referencing [PEP 0350](https://www.python.org/dev/
 
 Implement `__repr__` for any class you implement. This should be second nature. Implement `__str__` if you think it would be useful to have a string version which errs on the side of readability. quoting https://stackoverflow.com/a/2626364
 
+## property decorator
+
+- getter: `@property`
+- setter: `@<PROPERTY NAME>.setter`
+- deleter: `@<PROPERTY NAME>.deleter`
+
+```python
+class House:
+
+	def __init__(self, price):
+		self._price = price
+
+	@property
+	def price(self):
+		return self._price
+	
+	@price.setter
+	def price(self, new_price):
+		if new_price > 0 and isinstance(new_price, float):
+			self._price = new_price
+		else:
+			print("Please enter a valid price")
+
+	@price.deleter
+	def price(self):
+		del self._price
+```
+
+quoting https://www.freecodecamp.org/news/python-property-decorator/
+
+## class membery type hinting
+
+```python
+class DataAnalyzer:
+    train_data: pd.DataFrame
+    test_data: pd.DataFrame
+
+    def __init__(self, train_data, test_data):
+        self.train_data = train_data
+        self.test_data = test_data
+```
+
+see: https://stackoverflow.com/a/59784221
+
 ## Testing: pytest
 
 I like [pytest](https://docs.pytest.org/)
