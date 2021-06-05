@@ -4,6 +4,10 @@
 
 Markdown links can be given with additional references at the document's bottom to not clutter their body. That's called [Link Reference Definition](https://foambubble.github.io/foam/features/link-reference-definitions.html). But currently there is [no way to make them work with everything at the same time](https://foambubble.github.io/foam/features/link-reference-definitions.html): GitHub web UI, GitHub pages, VS Code editor and VS Code Markdown preview. However, there are some [suggestions](https://foambubble.github.io/foam/features/link-reference-definitions.html) in discussion for Foam.
 
+## Link to heading
+
+See at work in e.g. [[..\powershell.md]].
+
 ## Syntax highlighting in code blocks
 
 ```markdown
