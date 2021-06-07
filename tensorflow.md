@@ -1,5 +1,9 @@
 # tensorflow
 
+## GPU memory usage
+
+Sometimes Tensorflow exits with strange error like `Could not create cudnn handle: CUDNN_STATUS_ALLOC_FAILED`. That maybe happened because you wanted Tensorflow to run on a GPU, whoose memory is already in use by some other processes; in that case Tensorflow doesn't even give it a try with the remaining memory. To force Tensorflow into starting with less than all GPU memory set environment variable `TF_FORCE_GPU_ALLOW_GROWTH = true`.
+
 ## Datasets
 
 ### Interleaving multiple Datasets
