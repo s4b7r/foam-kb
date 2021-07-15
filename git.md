@@ -34,3 +34,22 @@ Install [jq](https://stedolan.github.io/jq/), if necessary.
         required = true
 ```
 
+## Word with Git
+
+Create `./.gitattributes` with:
+
+```ini
+*.docx diff=pandoc
+```
+
+Add to `./.git/config`:
+
+```ini
+[diff "pandoc"]
+  textconv=pandoc --to=markdown
+  prompt = false
+[alias]
+  wdiff = diff --word-diff=color --unified=1
+```
+
+See https://hrishioa.github.io/tracking-word-documents-with-git/
