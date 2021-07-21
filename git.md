@@ -53,3 +53,54 @@ Add to `./.git/config`:
 ```
 
 See https://hrishioa.github.io/tracking-word-documents-with-git/
+
+## Submodules
+
+Submodules sind quasi Sub-Repos.
+
+https://github.blog/2016-02-01-working-with-submodules/
+
+Submodul zu einem Repo hinzufügen: `git submodule add <repository url> <new directory for submodule>`
+
+Falls nötig, manuell Inhalte des Submoduls laden: `git submodule update --init --recursive`
+Das hat Git früher nicht automatisch getan.
+
+Ein Repo mit Submodulen klonen: `git clone --recursive <project url>`
+
+Submodule eines, ohne --recursive geklonten, Repos laden: `git submodule update --init --recursive`
+
+Submodules aus Quellen mit inoffiziellem SSL Zertifikat einbinden:
+Die SSL Verifizierung muss für `git submodule add` in der globalen Konfiguration deaktiviert werden. Mit der lokalen Konfiguration reicht es nicht aus. Alternativ: Windows Zertifikatspeicher nutzen. (Eine Anleitung dafür ist hier auch zu finden.)
+
+Submodul aktualisieren: Im Verzeichnis des Submoduls ganz normal Fetch, Pull, etc. machen und anschließend im übergeordneten Repo `git add [SUBREPO]` plus Commit. Oder `git submodule update --remote`.
+
+## Unter der Haube / Technische Interna von Git
+
+### Den Commit finden, der einen bestimmten Blob enthält
+
+```sh
+#!/bin/sh
+
+git rev-list --all |
+while read commit; do
+    if git ls-tree -r $commit | grep -q "$1"; then
+	    echo $(git log -n 1 $commit)
+	    break
+    fi
+done
+```
+
+### Ort von Einstellungen
+
+Um die Konfigurationsdatei herauszufinden, in der eine bestimmte Option enthalten ist: `git config --list --show-origin`
+
+### Bash Titel anpassen (Git for Windows)
+
+E.g. in `C:\Program Files\Git\etc\profile.d\git-prompt.sh`:
+
+- Replace line `TITLEPREFIX=$MSYSTEM` with `TITLEPREFIX='git'`
+- and `PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title` with
+
+```
+PS1='\[\033]0;$TITLEPREFIX:`basename $PWD`\007\]' # set window title
+```
