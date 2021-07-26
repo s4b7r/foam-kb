@@ -1,6 +1,8 @@
 # conda
 
-### Conda selbst aktualisieren
+## 
+
+## Conda selbst aktualisieren
 
 ```bat
 conda update conda
@@ -38,7 +40,15 @@ conda remove --name myenv --all
 
 Geht leider nicht. Lösung: Klonen und altes entfernen.
 
-## Spezifische Paket Version / Build installieren
+## Paketmanagemetn
+
+### Install from requirements.txt
+
+```bat
+conda install --file requirements.txt
+```
+
+### Spezifische Paket Version / Build installieren
 
 ```bat
 conda install PAKET=VERSION
