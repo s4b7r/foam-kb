@@ -40,6 +40,12 @@ conda remove --name myenv --all
 
 Geht leider nicht. Lösung: Klonen und altes entfernen.
 
+### requirements.txt erstellen
+
+```bat
+conda list --export > requirements.txt
+```
+
 ## Paketmanagemetn
 
 ### Install from requirements.txt
