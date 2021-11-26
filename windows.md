@@ -3,5 +3,5 @@
 ## Remote query logged on users
 
 ```cmd
-psloggedon \\SERVERNAME
+query user /server:SERVERNAME
 ```
