@@ -34,8 +34,8 @@ Personally, I use code tags for code details that need to be improved. So tags a
 
 Tag    | Meaning
 -------|----------------------------------------------------------------------------------------------------------
-BUG    | Defects
 !!!    | In need of immediate attention.
+BUG    | Defects
 TODO   | tasks/features that are pending completion.
 HACK   | Temporary code to force inflexible functionality, or simply a test change, or workaround a known problem.
 FIXME  | In need of refactoring or cleanup: Areas of problematic or ugly code.
