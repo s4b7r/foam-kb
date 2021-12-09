@@ -92,7 +92,7 @@ done
 
 ### Ort von Einstellungen
 
-Um die Konfigurationsdatei herauszufinden, in der eine bestimmte Option enthalten ist: `git config --list --show-origin`
+Um die Konfigurationsdatei herauszufinden, in der eine bestimmte Option enthalten ist: `git config --list --show-origin` [[1]](https://stackoverflow.com/questions/17756753/where-do-the-settings-in-my-git-configuration-come-from/35670933#35670933)
 
 ### Bash Titel anpassen (Git for Windows)
 

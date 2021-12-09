@@ -1,7 +1,5 @@
 # conda
 
-## 
-
 ## Conda selbst aktualisieren
 
 ```bat
@@ -46,6 +44,14 @@ Geht leider nicht. Lösung: Klonen und altes entfernen.
 conda list --export > requirements.txt
 ```
 
+### Environments default Pfad ändern
+
+`conda config --add envs_dirs c:\conda-envs`
+
+`c:\users\[USER]\.condarc`
+
+https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs
+
 ## Paketmanagemetn
 
 ### Install from requirements.txt
@@ -64,6 +70,7 @@ conda install PAKET=VERSION
 conda install PAKET=VERSION=BUILD
 ```
 
+https://docs.conda.io/projects/conda-build/en/latest/resources/package-spec.html#package-match-specifications
 
 ## Conda Environment Revisions / History
 
