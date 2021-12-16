@@ -1,8 +1,26 @@
 # Python
 
+- [Python](#python)
+	- [f strings](#f-strings)
+	- [importlib](#importlib)
+	- [Code tags](#code-tags)
+		- [Mnemonics](#mnemonics)
+		- [Fields](#fields)
+	- [`__repr__` vs `__str__`](#__repr__-vs-__str__)
+	- [property decorator](#property-decorator)
+	- [class membery type hinting](#class-membery-type-hinting)
+	- [Testing: pytest](#testing-pytest)
+		- [Warnings in output](#warnings-in-output)
+		- [Test parameterization](#test-parameterization)
+		- [Asserting exceptions](#asserting-exceptions)
+		- [Logging inside of test functions](#logging-inside-of-test-functions)
+		- [Get log messages form units under test](#get-log-messages-form-units-under-test)
+		- [Assertions about NumPy arrays](#assertions-about-numpy-arrays)
+	- [multiprocessing](#multiprocessing)
+
 Use [[conda]] for managing Python environments with different packages / versions of packages.
 
-[[Python-Lists.md]] get their own page
+[[Python-Lists.md]] got their own page
 
 ## f strings
 
@@ -32,6 +50,14 @@ Source: https://realpython.com/lessons/reloading-module/
 
 Personally, I use code tags for code details that need to be improved. So tags are a sign of further work.
 
+Get's more Python-specific by referencing [PEP 0350](https://www.python.org/dev/peps/pep-0350/#mnemonics)
+
+The official (by PEP) syntax is `# MNEMONIC: Some (maybe multi-line) commentary. <field field ...>`
+
+### Mnemonics
+
+This list contains only what I use and tries to be sorted by (my) priority.
+
 Tag    | Meaning
 -------|----------------------------------------------------------------------------------------------------------
 !!!    | In need of immediate attention.
@@ -48,9 +74,18 @@ PORT   | Workarounds specific to OS, Python version, etc.
 NOTE   | Sections which need discussion or further investigation.
 SEE    | Pointers to other code, web link, etc.
 
-<br>
+### Fields
 
-Get's more Python-specific by referencing [PEP 0350](https://www.python.org/dev/peps/pep-0350/#mnemonics)
+Useful fields could be:
+
+- `AAA[,BBB]...`
+  - List of Originator or Assignee initials
+  - (the context determines which unless both should exist).
+  - It is also okay to use usernames such as MicahE instead of initials.
+  - Initials (in upper case) are the preferred form.
+- `YYYY[-MM[-DD]]`
+  - The Origination Date indicating when the comment was added,
+  - in ISO 8601 [2] format (digits and hyphens only)
 
 ## `__repr__` vs `__str__`
 
