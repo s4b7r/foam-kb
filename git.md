@@ -1,5 +1,16 @@
 # Git
 
+- [Git](#git)
+  - [Patch files](#patch-files)
+  - [Ipython Notebooks in Git](#ipython-notebooks-in-git)
+  - [Word with Git](#word-with-git)
+  - [end of line](#end-of-line)
+  - [Submodules](#submodules)
+  - [Unter der Haube / Technische Interna von Git](#unter-der-haube--technische-interna-von-git)
+    - [Den Commit finden, der einen bestimmten Blob enthält](#den-commit-finden-der-einen-bestimmten-blob-enthält)
+    - [Ort von Einstellungen](#ort-von-einstellungen)
+    - [Bash Titel anpassen (Git for Windows)](#bash-titel-anpassen-git-for-windows)
+
 ## Patch files
 
 ```bash
@@ -53,6 +64,16 @@ Add to `./.git/config`:
 ```
 
 See https://hrishioa.github.io/tracking-word-documents-with-git/
+
+## end of line
+
+Specify end of line for specific files: Use `.gitattributes`, e.g.:
+
+```
+*.sh eol=lf
+```
+
+See https://stackoverflow.com/a/10357545
 
 ## Submodules
 
