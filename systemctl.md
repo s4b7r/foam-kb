@@ -1,5 +1,7 @@
 # systemctl
 
+Shutdown system `systemctl shutdown`. Reboot with `systemctl reboot`.
+
 ## Own service
 
 Used systemctl in [powercontrol-server](https://github.com/s4b7r/powercontrol-server) to create my own service.
@@ -21,3 +23,11 @@ journalctl -u service-name
 ```
 
 See https://unix.stackexchange.com/questions/225401/how-to-see-full-log-from-systemctl-status-service
+
+## Run script after boot
+
+https://www.golinuxcloud.com/run-script-at-startup-boot-without-cron-linux/
+
+## Run script before shutdown   
+
+https://www.golinuxcloud.com/run-script-with-systemd-before-shutdown-linux/
