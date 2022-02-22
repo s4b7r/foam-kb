@@ -25,7 +25,7 @@ git format-patch <COMMIT>
 git am <PATCH FILES>
 ```
 
-Will give patch files for all commits from <COMMIT> upto the current branche's tip.
+Will give patch files for all commits from <COMMIT> upto the current branche's tip. Or use `git format-patch <COMMIT START>..<COMMIT END>` for a range.
 
 ## Ipython Notebooks in Git
 
