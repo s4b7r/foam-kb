@@ -1,4 +1,4 @@
-# BinaryCrossentropy
+# Crossentropy
 
 Loss term for machine learning / neural nets.
 
