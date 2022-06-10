@@ -6,6 +6,8 @@
   - [Word with Git](#word-with-git)
   - [end of line](#end-of-line)
   - [Submodules](#submodules)
+  - [Remotes](#remotes)
+    - [push to multiple remotes](#push-to-multiple-remotes)
   - [Unter der Haube / Technische Interna von Git](#unter-der-haube--technische-interna-von-git)
     - [Den Commit finden, der einen bestimmten Blob enthält](#den-commit-finden-der-einen-bestimmten-blob-enthält)
     - [Ort von Einstellungen](#ort-von-einstellungen)
@@ -94,6 +96,17 @@ Submodules aus Quellen mit inoffiziellem SSL Zertifikat einbinden:
 Die SSL Verifizierung muss für `git submodule add` in der globalen Konfiguration deaktiviert werden. Mit der lokalen Konfiguration reicht es nicht aus. Alternativ: Windows Zertifikatspeicher nutzen. (Eine Anleitung dafür ist hier auch zu finden.)
 
 Submodul aktualisieren: Im Verzeichnis des Submoduls ganz normal Fetch, Pull, etc. machen und anschließend im übergeordneten Repo `git add [SUBREPO]` plus Commit. Oder `git submodule update --remote`.
+
+## Remotes
+
+### push to multiple remotes
+
+```bash
+git remote set-url --add --push origin git://original/repo.git
+git remote set-url --add --push origin git://another/repo.git
+```
+
+Beware! The first command will overwrite the push remote: You have to provide both, the new / second push destionation and the current destination as well.
 
 ## Unter der Haube / Technische Interna von Git
 
