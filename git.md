@@ -97,6 +97,8 @@ Die SSL Verifizierung muss für `git submodule add` in der globalen Konfiguratio
 
 Submodul aktualisieren: Im Verzeichnis des Submoduls ganz normal Fetch, Pull, etc. machen und anschließend im übergeordneten Repo `git add [SUBREPO]` plus Commit. Oder `git submodule update --remote`.
 
+Submodul entfernen (2022): `git rm <path-to-submodule>`. https://stackoverflow.com/a/1260982
+
 ## Remotes
 
 ### push to multiple remotes
