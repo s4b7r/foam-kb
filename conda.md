@@ -1,21 +1,22 @@
 # conda
 
 - [conda](#conda)
-    - [Conda selbst aktualisieren](#conda-selbst-aktualisieren)
-    - [Initialize Conda prompt](#initialize-conda-prompt)
-    - [Conda Environments](#conda-environments)
-        - [Conda Environment erstellen](#conda-environment-erstellen)
-        - [Conda Environment klonen](#conda-environment-klonen)
-        - [Conda Environment entfernen](#conda-environment-entfernen)
-        - [Conda Environment umbenennen](#conda-environment-umbenennen)
-        - [requirements.txt erstellen](#requirementstxt-erstellen)
-        - [Environments default Pfad ändern](#environments-default-pfad-ändern)
-    - [Paketmanagemetn](#paketmanagemetn)
-        - [Install from requirements.txt](#install-from-requirementstxt)
-        - [Spezifische Paket Version / Build installieren](#spezifische-paket-version--build-installieren)
-    - [Conda Environment Revisions / History](#conda-environment-revisions--history)
-        - [Revisions anzeigen](#revisions-anzeigen)
-        - [Revision wiederherstellen](#revision-wiederherstellen)
+  - [Conda selbst aktualisieren](#conda-selbst-aktualisieren)
+  - [Initialize Conda prompt](#initialize-conda-prompt)
+  - [Conda Environments](#conda-environments)
+    - [Conda Environment erstellen](#conda-environment-erstellen)
+    - [Conda Environment klonen](#conda-environment-klonen)
+    - [Conda Environment entfernen](#conda-environment-entfernen)
+    - [Conda Environment umbenennen](#conda-environment-umbenennen)
+    - [requirements.txt erstellen](#requirementstxt-erstellen)
+    - [environment.yml erstellen](#environmentyml-erstellen)
+    - [Environments default Pfad ändern](#environments-default-pfad-ändern)
+  - [Paketmanagemetn](#paketmanagemetn)
+    - [Install from requirements.txt](#install-from-requirementstxt)
+    - [Spezifische Paket Version / Build installieren](#spezifische-paket-version--build-installieren)
+  - [Conda Environment Revisions / History](#conda-environment-revisions--history)
+    - [Revisions anzeigen](#revisions-anzeigen)
+    - [Revision wiederherstellen](#revision-wiederherstellen)
 
 ## Conda selbst aktualisieren
 
@@ -59,6 +60,12 @@ Geht leider nicht. Lösung: Klonen und altes entfernen.
 
 ```bat
 conda list --export > requirements.txt
+```
+
+### environment.yml erstellen
+
+```bat
+conda env export --from-history -f environment.yml
 ```
 
 ### Environments default Pfad ändern
